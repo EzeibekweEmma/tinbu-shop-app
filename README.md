@@ -2,8 +2,6 @@
 Live Link: [Timbu shop App](https://appetize.io/app/android/com.ezeibekweemma.timbushop?device=pixel7&osVersion=13.0)
 APK Link: [Timbu shop App](https://expo.dev/artifacts/eas/aCgW8zQ87fCkq54SLrUPxT.apk)
 
-![Welcome Screen](./assets/images/welcome%20screen.png)
-
 **Objectives**: Create a Timbu account on [timbu.cloud](http://timbu.cloud/). Get your API key (it only views once). Add some products information on your timbu account under Retail Business. Retrieve all products information using the api. Display the products on a screen in a list.
 
 **Requirements**:
