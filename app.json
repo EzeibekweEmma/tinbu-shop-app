@@ -19,14 +19,14 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.ezeibekweemma.nameseparator"
+      "package": "com.ezeibekweemma.timbushop"
     },
     "web": {
       "favicon": "./assets/icon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "ac6abb4a-fd2c-46b0-85ef-d3fca614aa86"
+        "projectId": "b32546a2-0c98-4699-a62a-16bfc947e05f"
       }
     }
   }

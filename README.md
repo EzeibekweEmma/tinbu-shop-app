@@ -1,86 +1,42 @@
-# Duplicate Name Finder
+# HNG11 Task 2 - Create an app that Implements [Timbu Api](https://docs.timbu.cloud/api/intro)
+Live Link: [Timbu shop App](https://appetize.io/app/android/com.ezeibekweemma.timbushop?device=pixel7&osVersion=13.0)
+APK Link: [Timbu shop App](https://expo.dev/artifacts/eas/aCgW8zQ87fCkq54SLrUPxT.apk)
 
-Duplicate Name Finder is a React Native app that helps you find duplicate names from a comma-separated list. It normalizes the names by converting them to lowercase and returns groups of names that are duplicates.
+![Welcome Screen](./assets/images/welcome%20screen.png)
 
-## Features
+**Objectives**: Create a Timbu account on [timbu.cloud](http://timbu.cloud/). Get your API key (it only views once). Add some products information on your timbu account under Retail Business. Retrieve all products information using the api. Display the products on a screen in a list.
 
-- **Real-Time Duplicate Detection:** Enter a list of names, and the app will immediately show groups of duplicates.
-- **Normalization:** Compares names case-insensitively, ensuring `John` and `john` are considered duplicates.
-- **User-Friendly Interface:** Simple text input and easy-to-read output.
+**Requirements**:
+- Implementation of [Timbu API](https://docs.timbu.cloud/api/intro).
+- Have a proper mobile architecture.
+- The display of at least 10 products with images from the timbu api on a screen in a list.
+- show relevant information of the products you have added on [timbu](http://timbu.cloud/) in the list item.
+- Proper UI state management and handle errors properly.
 
-## Screenshots
-<!--  -->
-![Screenshot](https://via.placeholder.com/300x500) <!-- Replace with actual screenshot URL -->
+---
 
-## Installation
+## Get started
 
-To run this app locally, follow these steps:
+1. Clone the repository
 
-1. **Clone the repository:**
    ```bash
-   git clone 
-   cd duplicate-name-finder
-   ```
+   git clone https://github.com/EzeibekweEmma/tinbu-shop-app
+   cd tinbu-shop-app
+    ```
+2. Install dependencies
 
-2. **Install dependencies:**
    ```bash
    npm install
    ```
-   or
+
+3. Start the app
+
    ```bash
-   yarn install
+    npx expo start
    ```
 
-3. **Run the app:**
-   ```bash
-   npx expo start
-   ```
+select the platform you want to run the app on.
 
-   This will start the Expo development server. You can then use the Expo Go app on your phone or an emulator to see the app in action.
 
-## Usage
-
-1. **Launch the app.**
-2. **Enter a comma-separated list of names** into the text input field.
-3. **Press the "Separate" button.** The app will display groups of duplicate names below the input field.
-
-### Example
-
-**Input:**
-```
-John, JOHN, joy, JOHn, Peter, JOY, tosin, PeTER
-```
-
-**Output:**
-```
-John, JOHN, JOHn
-joy, JOY
-Peter, PeTER
-```
-
-## Code Overview
-
-The core logic of the app is in the `findDuplicateNames` function, which groups names by their lowercase forms and returns only the groups with more than one name.
-
-```typescript
-const findDuplicateNames = (names: string[]) => {
-  const nameGroups: { [key: string]: string[] } = {};
-
-  names.forEach((name) => {
-    const lowerCaseName = name.toLowerCase();
-    if (nameGroups[lowerCaseName]) {
-      nameGroups[lowerCaseName].push(name);
-    } else {
-      nameGroups[lowerCaseName] = [name];
-    }
-  });
-
-  return Object.values(nameGroups).filter((group) => group.length > 1);
-};
-```
-
-## Technologies Used
-
-- **React Native:** Framework for building native apps using React.
-- **TypeScript:** For type safety and better developer experience.
-- **Expo:** For easier development and testing.
+## Screenshot
+![Screenshot](./assets/app-screenshot.png)
