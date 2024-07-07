@@ -11,6 +11,7 @@ import {
   Dimensions,
 } from 'react-native';
 import { MaterialIcons, Entypo } from '@expo/vector-icons';
+import Constants from 'expo-constants';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -53,14 +54,11 @@ export default function App() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(
-        'https://api.timbu.cloud/products?organization_id=921f0d30c5dd46ceae10098f2f3f5ab5&Appid=S4YPG705M6YZUZ0&Apikey=8881bbda2d704c5cafac14f8c2335b3420240705080652181172'
-      );
+      const response = await fetch(Constants.expoConfig?.extra?.apiUrl || '');
       const result = await response.json();
       setData(result.items);
     } catch (error) {
       alert(`Something went wrong!\n\n${(error as Error).message}`);
-      console.log('ok');
     } finally {
       setLoading(false);
     }
